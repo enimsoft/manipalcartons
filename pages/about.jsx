@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../styles/About.module.css'
+import background from '../assets/background.jpg'
 
 const about = () => {
     return (
@@ -10,24 +11,25 @@ const about = () => {
                 <div className={styles.nav}></div>
 
                 {/* title */}
-                <div className={styles.headerTitle}>Manipal Cartons</div>
+                <h1>Manipal Cartons</h1>
 
-                <div className={styles.wrappertext}>
-                    <p className={styles.headerText}>
+                <div className={styles.contentWrap}>
+                    <p>
                         The <strong>#1</strong> movers and packers in Manipal
                     </p>
                 </div>
+                <br />
 
-                <div className={styles.button}>Deliver Now</div>
+                <button>Deliver Now</button>
             </header>
 
             <section className={styles.section_1}>
                 <div className={styles.card}>
                     <div className={styles.logo}></div>
                     <div className={styles.contentWrap}>
-                        <div className={styles.cardTitle}>
+                        <h3>
                             Quality
-                        </div>
+                        </h3>
                         <p>
                             We deliver on time and ensure you have the best experience
                         </p>
@@ -36,9 +38,9 @@ const about = () => {
                 <div className={styles.card}>
                     <div className={styles.logo}></div>
                     <div className={styles.contentWrap}>
-                        <div className={styles.cardTitle}>
+                        <h3>
                             Safety
-                        </div>
+                        </h3>
                         <p>
                             We use the best services for delivering to ensure your valuable luggage is safe
                         </p>
@@ -47,9 +49,9 @@ const about = () => {
                 <div className={styles.card}>
                     <div className={styles.logo}></div>
                     <div className={styles.contentWrap}>
-                        <div className={styles.cardTitle}>
+                        <h3>
                             Guarantee
-                        </div>
+                        </h3>
                         <p>
                             We value your feedback and are always there to address all of your issues
                         </p>
@@ -59,17 +61,17 @@ const about = () => {
 
             <section className={styles.section_2}>
                 <div className={styles.contentWrap}>
-                    <div className={styles.heading}>Great service at a competitive price</div>
-                    <p>We strive to give our best to all our customers. With us you will get a carefree experience at a competitive price</p>
-                    <div className={styles.button}>Place your order</div>
+                    <h1>Great service at a competitive price</h1>
+                    <p>We strive to give our best to all our customers. With us you will get a <strong>carefree experience</strong> at a competitive price</p>
+                    <br />
+                    <button>Place your order</button>
                 </div>
             </section>
 
             <section className={styles.section_3}>
                 <div className={styles.contentWrap}>
-                    <div className={styles.heading}>Seamless Customer Support</div>
-                    <p>We want our customers to have a worry-free experience. We are always active on our support channels to address all your issues.</p>
-                    <div className={styles.button}>Place your order</div>
+                    <h1>Seamless Customer Support</h1>
+                    <p>We want our customers to have a <strong>worry-free experience.</strong> We are always active on our support channels to address all your issues.</p>
                 </div>
             </section>
 

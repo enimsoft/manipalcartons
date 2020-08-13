@@ -1,0 +1,48 @@
+/* general stuff */
+
+.container h {
+    display: block;
+}
+
+.container p {
+    display: block;
+    padding: 0 3em;
+}
+
+.section_1, .section_2, .section_3 {
+    padding: 2em 4em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentWrap {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_1 {
+    background-color: white;
+}
+
+.section_2 {
+    min-height: 442px;
+    background-color: #0785F2;
+    color: white;
+}
+
+.section_2 p {
+    color: #f2f2f2;
+}
+
+.section_2 strong {
+    color: white;
+}
+
+.section_3 {
+    min-height: 442px;
+    background-color: #f2f2f2;
+}
