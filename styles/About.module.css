@@ -1,4 +1,7 @@
 /* general stuff */
+.container {
+    /* background: #333 */
+}
 
 .container h {
     display: block;
@@ -7,6 +10,24 @@
 .container p {
     display: block;
     padding: 0 3em;
+}
+
+.bgImage {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.header {
+    padding: 0 0 3em 0;
+    background: #333;
+    color: white;
+    font-size: 1.25em;
 }
 
 .section_1, .section_2, .section_3 {
@@ -28,6 +49,10 @@
     background-color: white;
 }
 
+.section_1 p {
+    color: #505050;
+}
+
 .section_2 {
     min-height: 442px;
     background-color: #0785F2;
@@ -45,4 +70,21 @@
 .section_3 {
     min-height: 442px;
     background-color: #f2f2f2;
+}
+
+.footer {
+    margin: 0;
+    padding: 2em 0;
+    background: #2C241D;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 0.75em;
 }

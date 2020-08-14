@@ -1,12 +1,15 @@
 import React from 'react'
 import styles from '../styles/About.module.css'
-import background from '../assets/background.jpg'
+// import background from '/static/assets/background.jpg'
 
 const about = () => {
     return (
         <div className={styles.container}>
 
-            <header className={styles.header}>
+            <header className={styles.header}>   
+
+                <img src="/static/assets/background.jpg" className={styles.bgImage}/>
+
                 {/* collapsible navbar */}
                 <div className={styles.nav}></div>
 
@@ -75,7 +78,19 @@ const about = () => {
                 </div>
             </section>
 
-            <footer className={styles.footer}></footer>
+            <footer className={styles.footer}>
+                <div className={styles.box}>
+                    <h3>Contact</h3>
+                    <p>+91 8765435467</p>
+                    <p>+91 8765435467</p>
+                </div>
+
+                <div className={styles.box}>
+                    <h3>Support</h3>
+                    <p>support@example.com</p>
+                    <p>support2@example.com</p>
+                </div>
+            </footer>
         </div>
     )
 }
