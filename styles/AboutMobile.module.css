@@ -1,0 +1,145 @@
+/* general stuff */
+
+.boxContent {
+    position: relative;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 0em;
+}
+
+.container {
+    /* background: #333 */
+}
+
+.container h {
+    display: block;
+}
+
+.container p {
+    display: block;
+    padding: 0 3em;
+}
+
+.bgImage {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.header {
+    padding: 0 0 3em 0;
+    background: #333;
+    color: white;
+    font-size: 1.25em;
+}
+
+.section_1, .section_2 .box {
+    height: 30%;
+    min-height: 442px;
+}
+
+.section_1, .section_2 .box {
+    padding: 3em 4em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentWrap {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_1 {
+    background-color: white;
+}
+
+.section_1 ul {
+    list-style: none;
+}
+
+.section_1 p {
+    color: #505050;
+}
+
+.section_2 .box {
+    height: 100%;
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.btn2 {
+    color: black;
+    border: 1px solid black;
+    background: none;
+}
+
+.btn2:hover {
+    color: white;
+    background: black;
+}
+
+.section_2 .box .boxContent {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section_2 .box:first-child {
+    background-color: #0785F2;
+    color: #f2f2f2;
+}
+
+.section_2 .box:first-child strong {
+    color: white;
+}
+
+.footer {
+    margin: 0;
+    padding: 2em 0;
+    background: #2C241D;
+    color: white;
+}
+
+.footer .contentWrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 0.75em;
+}
+
+@media (min-width: 900px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+    .contentWrap, .section_1 ul {
+        grid-column: 2/4;
+    }
+    .section_1 ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .section_1 li {
+        width: auto;
+    }
+    .section_2 .box {
+        grid-column: span 2;
+    }
+}
