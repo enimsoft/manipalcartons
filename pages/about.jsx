@@ -81,7 +81,7 @@ const about = () => {
             <footer className={styles.footer}>
                 <div className={styles.box}>
                     <h3>Contact</h3>
-                    <p>+91 8765435467</p>
+                    <p>+91 8765435468</p>
                     <p>+91 8765435467</p>
                 </div>
 
