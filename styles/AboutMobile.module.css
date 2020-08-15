@@ -58,11 +58,6 @@
 .section_1 {
     background-color: white;
 }
-
-.section_1 ul {
-    list-style: none;
-}
-
 .section_2 .box {
     height: 100%;
     background-color: #f2f2f2;
@@ -120,10 +115,10 @@
         display: grid;
         grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
     }
-    .contentWrap, .section_1 ul {
+    .contentWrap, .section_1 > div {
         grid-column: 2/4;
     }
-    .section_1 ul {
+    .section_1 > div {
         display: flex;
         justify-content: space-evenly;
     }

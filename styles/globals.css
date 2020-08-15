@@ -1,11 +1,11 @@
-html,
-body {
+html, body {
   padding: 0;
   margin: 0;
   text-align: center;
 }
 
 /* headings */
+
 h1, h2, h3 {
   margin: 0;
   padding: 1em 0;
@@ -23,6 +23,7 @@ h3 {
 }
 
 /* body */
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
@@ -30,6 +31,7 @@ body {
 }
 
 button {
+  outline: none;
   width: 12.5em;
   height: 5em;
   text-align: center;
@@ -41,7 +43,8 @@ button {
   background: none;
 }
 
-button:hover {
+button:hover,
+button:focus {
   color: #2C241D;
   background: white;
 }

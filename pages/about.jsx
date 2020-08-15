@@ -33,8 +33,8 @@ const about = () => {
             </header>
 
             <section className={cx(styles.section_1, styles.grid)}>
-                <ul>
-                    <li>
+                <div>
+                    <div>
                         <Card
                             {...{
                                 styles: styles,
@@ -42,9 +42,9 @@ const about = () => {
                                 heading: "Quality",
                                 content: "We deliver on time and ensure you have the best experience"
                             }}
-                        />
-                    </li>
-                    <li>
+                        ></Card>
+                    </div>
+                    <div>
                         <Card
                             {...{
                                 styles: styles,
@@ -52,9 +52,9 @@ const about = () => {
                                 heading: "Safety",
                                 content: "We use the best services for delivering to ensure your valuable luggage is safe"
                             }}
-                        />
-                    </li>
-                    <li>
+                        ></Card>
+                    </div>
+                    <div>
                         <Card
                             {...{
                                 styles: styles,
@@ -62,9 +62,9 @@ const about = () => {
                                 heading: "Guarantee",
                                 content: "We value your feedback and are always there to address all of your issues."
                             }}
-                        />
-                    </li>
-                </ul>
+                        ></Card>
+                    </div>
+                </div>
             </section>
 
             <section className={cx(styles.section_2, styles.grid)}>
