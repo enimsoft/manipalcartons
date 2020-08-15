@@ -1,6 +1,11 @@
 import React from 'react'
 import styles from '../styles/AboutMobile.module.css'
 import cx from 'classnames'
+import correct from '../assets/Guarantee'
+import Guarantee from '../assets/Guarantee'
+import Quality from '../assets/Quality'
+import Safety from '../assets/Safety'
+import Card from '../components/Card/Card'
 
 // import background from '/static/assets/background.jpg'
 
@@ -10,7 +15,7 @@ const about = () => {
 
             <header className={cx(styles.header, styles.grid)}>
 
-                <img src="/static/assets/background.jpg" className={styles.bgImage} />
+                {/* <img src="/static/assets/background.jpg" className={styles.bgImage} /> */}
 
                 {/* collapsible navbar */}
                 <div className={styles.nav}></div>
@@ -30,43 +35,34 @@ const about = () => {
             <section className={cx(styles.section_1, styles.grid)}>
                 <ul>
                     <li>
-                        <div className={styles.card}>
-                            <div className={styles.logo}></div>
-                            <div className={styles.cardContent}>
-                                <h3>
-                                    Quality
-                        </h3>
-                                <p>
-                                    We deliver on time and ensure you have the best experience
-                        </p>
-                            </div>
-                        </div>
+                        <Card
+                            {...{
+                                styles: styles,
+                                logo: <Quality/>,
+                                heading: "Quality",
+                                content: "We deliver on time and ensure you have the best experience"
+                            }}
+                        />
                     </li>
                     <li>
-                        <div className={styles.card}>
-                            <div className={styles.logo}></div>
-                            <div className={styles.cardContent}>
-                                <h3>
-                                    Safety
-                                </h3>
-                                <p>
-                                    We use the best services for delivering to ensure your valuable luggage is safe
-                                </p>
-                            </div>
-                        </div>
+                        <Card
+                            {...{
+                                styles: styles,
+                                logo: <Safety/>,
+                                heading: "Safety",
+                                content: "We use the best services for delivering to ensure your valuable luggage is safe"
+                            }}
+                        />
                     </li>
                     <li>
-                        <div className={styles.card}>
-                            <div className={styles.logo}></div>
-                            <div className={styles.cardContent}>
-                                <h3>
-                                    Guarantee
-                                </h3>
-                                <p>
-                                    We value your feedback and are always there to address all of your issues
-                                </p>
-                            </div>
-                        </div>
+                        <Card
+                            {...{
+                                styles: styles,
+                                logo: <Guarantee/>,
+                                heading: "Guarantee",
+                                content: "We value your feedback and are always there to address all of your issues."
+                            }}
+                        />
                     </li>
                 </ul>
             </section>

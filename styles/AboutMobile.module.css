@@ -4,11 +4,6 @@
     position: relative;
 }
 
-.buttons {
-    position: absolute;
-    bottom: 0em;
-}
-
 .container {
     /* background: #333 */
 }
@@ -41,7 +36,7 @@
 }
 
 .section_1, .section_2 .box {
-    height: 30%;
+    /* height: 30%; */
     min-height: 442px;
 }
 
@@ -66,10 +61,6 @@
 
 .section_1 ul {
     list-style: none;
-}
-
-.section_1 p {
-    color: #505050;
 }
 
 .section_2 .box {
@@ -109,7 +100,7 @@
 .footer {
     margin: 0;
     padding: 2em 0;
-    background: #2C241D;
+    background: #333;
     color: white;
 }
 
@@ -141,5 +132,9 @@
     }
     .section_2 .box {
         grid-column: span 2;
+    }
+    .buttons {
+        position: absolute;
+        bottom: 0em;
     }
 }
