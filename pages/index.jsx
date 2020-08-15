@@ -9,7 +9,7 @@ import Card from '../components/Card/Card'
 
 import background from '../assets/background.jpg'
 
-const about = () => {
+const About = () => {
     return (
         <div className={styles.container}>
 
@@ -23,7 +23,7 @@ const about = () => {
 
                 <div className={styles.contentWrap}>
                     {/* title */}
-                    <h1>Manipal Cartons</h1>
+                    <h1><strong>Manipal Cartons</strong></h1>
                     <br/><br/>
                     <p>
                         The <strong>#1</strong> movers and packers in Manipal
@@ -106,4 +106,4 @@ const about = () => {
     )
 }
 
-export default about
+export default About
