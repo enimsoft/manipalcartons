@@ -5,11 +5,8 @@
     margin: 0;
 }
 
-.cardContent {
-    color: #505050;
-}
-
 .cardContent p {
+    color: #505050;
     padding: 0;
     /* margin: 0; */
 }

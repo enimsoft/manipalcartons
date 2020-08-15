@@ -91,14 +91,14 @@ const About = () => {
                 <div className={styles.contentWrap}>
                     <div className={styles.box}>
                         <h3>Contact</h3>
-                        <p>+91 8765435468</p>
-                        <p>+91 8765435467</p>
+                        <p>+91 7760513189</p>
+                        <p>+91 8105780251</p>
                     </div>
 
                     <div className={styles.box}>
                         <h3>Support</h3>
-                        <p>support@example.com</p>
-                        <p>support2@example.com</p>
+                        <p>manipalcartons@gmail.com</p>
+                        {/* <p>support2@example.com</p> */}
                     </div>
                 </div>
             </footer>
