@@ -23,6 +23,7 @@ const about = () => {
                 <div className={styles.contentWrap}>
                     {/* title */}
                     <h1>Manipal Cartons</h1>
+                    <br/><br/>
                     <p>
                         The <strong>#1</strong> movers and packers in Manipal
                     </p>
