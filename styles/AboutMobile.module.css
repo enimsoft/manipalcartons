@@ -17,20 +17,28 @@
     padding: 0 3em;
 }
 
-.bgImage {
+.imageContainer {
     position: absolute;
-    width: 100vw;
-    height: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
+    height: 100%;
+    overflow: hidden !important;
+}
+
+.bgImage {
+    z-index: 0;
+    background: #333;
     opacity: 0.4;
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
 }
 
 .header {
+    position: relative;
+    /* border: 1px solid red; */
     padding: 0 0 3em 0;
-    background: #333;
+    /* background: #333; */
+    opacity: 0.8;
     color: white;
     font-size: 1.25em;
 }
@@ -56,7 +64,7 @@
 }
 
 .section_1 {
-    background-color: white;
+    background: white;
 }
 
 .section_2 .box {
@@ -71,7 +79,7 @@
     background: none;
 }
 
-.btn2:hover {
+.btn2:hover, .btn2:focus {
     color: white;
     background: black;
 }
@@ -118,6 +126,9 @@
     }
     .contentWrap, .section_1>div {
         grid-column: 2/4;
+    }
+    .header {
+        min-height: 500px;
     }
     .section_1>div {
         display: flex;

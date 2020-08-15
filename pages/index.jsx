@@ -1,65 +1,109 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from 'react'
+import styles from '../styles/AboutMobile.module.css'
+import cx from 'classnames'
+import correct from '../assets/Guarantee'
+import Guarantee from '../assets/Guarantee'
+import Quality from '../assets/Quality'
+import Safety from '../assets/Safety'
+import Card from '../components/Card/Card'
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+import background from '../assets/background.jpg'
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+const about = () => {
+    return (
+        <div className={styles.container}>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+            <section className={cx(styles.header, styles.grid)}>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                <div className={styles.imageContainer}>
+                    <img src={background} className={styles.bgImage} />
+                </div>
+                {/* collapsible navbar */}
+                <div className={styles.nav}></div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                <div className={styles.contentWrap}>
+                    {/* title */}
+                    <h1>Manipal Cartons</h1>
+                    <br/><br/>
+                    <p>
+                        The <strong>#1</strong> movers and packers in Manipal
+                    </p>
+                    <br />
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                    <button>Deliver Now</button>
+                </div>
+            </section>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            <section className={cx(styles.section_1, styles.grid)}>
+                <div>
+                    <div>
+                        <Card
+                            {...{
+                                styles: styles,
+                                logo: <Quality/>,
+                                heading: "Quality",
+                                content: "We deliver on time and ensure you have the best experience"
+                            }}
+                        ></Card>
+                    </div>
+                    <div>
+                        <Card
+                            {...{
+                                styles: styles,
+                                logo: <Safety/>,
+                                heading: "Safety",
+                                content: "We use the best services for delivering to ensure your valuable luggage is safe"
+                            }}
+                        ></Card>
+                    </div>
+                    <div>
+                        <Card
+                            {...{
+                                styles: styles,
+                                logo: <Guarantee/>,
+                                heading: "Guarantee",
+                                content: "We value your feedback and are always there to address all of your issues."
+                            }}
+                        ></Card>
+                    </div>
+                </div>
+            </section>
+
+            <section className={cx(styles.section_2, styles.grid)}>
+                <div className={styles.box}>
+                    <div className={styles.boxContent}>
+                        <h1>Great service at a competitive price</h1>
+                        <p>We strive to give our best to all our customers. With us you will get a <strong>carefree experience</strong> at a competitive price</p>
+                        <br />
+                        <div className={styles.buttons}><button>Place Your Order</button></div>
+                    </div>
+                </div>
+                <div className={styles.box}>
+                    <div className={styles.boxContent}>
+                        <h1>Seamless Customer Support</h1>
+                        <p>We want our customers to have a <strong>worry-free experience.</strong> We are always active on our support channels to address all your issues.</p><br />
+                        <div className={styles.buttons}><button className={styles.btn2}>Contact Us</button></div>
+                    </div>
+                </div>
+            </section>
+
+            <footer className={cx(styles.footer, styles.grid)}>
+                <div className={styles.contentWrap}>
+                    <div className={styles.box}>
+                        <h3>Contact</h3>
+                        <p>+91 8765435468</p>
+                        <p>+91 8765435467</p>
+                    </div>
+
+                    <div className={styles.box}>
+                        <h3>Support</h3>
+                        <p>support@example.com</p>
+                        <p>support2@example.com</p>
+                    </div>
+                </div>
+            </footer>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+    )
 }
+
+export default about
