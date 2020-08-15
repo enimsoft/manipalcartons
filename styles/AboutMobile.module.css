@@ -37,11 +37,11 @@
 
 .section_1, .section_2 .box {
     /* height: 30%; */
-    min-height: 442px;
+    min-height: 450px;
 }
 
 .section_1, .section_2 .box {
-    padding: 3em 4em;
+    padding: 3em 2em;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -58,6 +58,7 @@
 .section_1 {
     background-color: white;
 }
+
 .section_2 .box {
     height: 100%;
     background-color: #f2f2f2;
@@ -115,12 +116,15 @@
         display: grid;
         grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
     }
-    .contentWrap, .section_1 > div {
+    .contentWrap, .section_1>div {
         grid-column: 2/4;
     }
-    .section_1 > div {
+    .section_1>div {
         display: flex;
         justify-content: space-evenly;
+    }
+    .section_1, .section_2 .box {
+        padding: 3em 4em;
     }
     .section_2 .box {
         grid-column: span 2;
