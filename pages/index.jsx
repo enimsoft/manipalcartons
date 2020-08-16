@@ -6,6 +6,7 @@ import Guarantee from '../assets/Guarantee'
 import Quality from '../assets/Quality'
 import Safety from '../assets/Safety'
 import Card from '../components/Card/Card'
+import Link from 'next/link'
 
 import background from '../assets/background.jpg'
 import Layout from '../components/Layout/Layout'
@@ -77,7 +78,7 @@ const About = () => {
                     <div className={styles.boxContent}>
                         <h1>Seamless Customer Support</h1>
                         <p>We want our customers to have a <strong>worry-free experience.</strong> We are always active on our support channels to address all your issues.</p><br />
-                        <div className={styles.buttons}><button className={styles.btn2}>Contact Us</button></div>
+                        <div className={styles.buttons}><Link href="/contact"><button className={styles.btn2}>Contact Us</button></Link></div>
                     </div>
                 </div>
             </section>

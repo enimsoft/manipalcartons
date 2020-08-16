@@ -2,6 +2,8 @@ import styles from '../styles/Contact.module.css'
 import cx from 'classnames'
 import { useState } from 'react'
 import WithStateToggle from '../utils/WithStateToggle'
+import Layout from '../components/Layout/Layout'
+import Link from 'next/link'
 
 const contact = ({ handler }) => (
     <div className={styles.container}>
@@ -23,9 +25,9 @@ const done = ({ handler }) => (
         <div className={styles.card2}>
             <h1 className={styles.heading}>Contact Us</h1>
             <h2 className={styles.heading}>Your request has been submitted! We will contact you shortly.</h2>
-            <div className={styles.submit2}><button class="btn2" onClick={e => handler(e.target.value)}>Okay</button></div>
+            <div className={styles.submit2}><Link href="/"><button class="btn2">Okay</button></Link></div>
         </div>
     </div>
 )
 
-export default () => (<WithStateToggle {...{ Before: contact, After: done }} />)
+export default () => (<Layout><WithStateToggle {...{ Before: contact, After: done }} /></Layout>)
