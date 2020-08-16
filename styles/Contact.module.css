@@ -37,9 +37,14 @@
     width: 100%;
 }
 
-.heading, .submit {
+.heading {
     margin: 0;
-    padding: 1em 0;
+    padding: 0.5em 0 1.5em 0;
+}
+
+.submit {
+    margin: 0;
+    padding: 1.5em 0.5em;
 }
 
 .submit>* {
