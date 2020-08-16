@@ -1,6 +1,5 @@
-import styles from '../styles/Contact.module.css'
+import styles from '../styles/Form.module.css'
 import cx from 'classnames'
-import { useState } from 'react'
 import WithStateToggle from '../utils/WithStateToggle'
 import Layout from '../components/Layout/Layout'
 import Link from 'next/link'

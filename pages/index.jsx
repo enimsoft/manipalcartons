@@ -26,7 +26,7 @@ const About = () => {
                         The <strong>#1</strong> movers and packers in Manipal
                     </h3>
                     <br/>
-                    <button>Deliver Now</button>
+                    <Link href="/order"><button>Deliver Now</button></Link>
                 </div>
             </section>
 
@@ -71,7 +71,7 @@ const About = () => {
                         <h1>Great service at a competitive price</h1>
                         <p>We strive to give our best to all our customers. With us you will get a <strong>carefree experience</strong> at a competitive price</p>
                         <br />
-                        <div className={styles.buttons}><button>Place Your Order</button></div>
+                        <div className={styles.buttons}><Link href="/order"><button>Place Your Order</button></Link></div>
                     </div>
                 </div>
                 <div className={styles.box}>
