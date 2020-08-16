@@ -10,6 +10,14 @@
     text-align: center;
 }
 
+.card2 {
+    position: relative;
+    background: white;
+    padding: 2em;
+    text-align: center;
+    height: 100vh;
+}
+
 .form > * {
     padding: 0.5em;
 }
@@ -42,6 +50,13 @@
     padding: 0.5em 0 1.5em 0;
 }
 
+.submit2 {
+    position: absolute;
+    bottom: 2em;
+    right: 0;
+    left: 0;
+}
+
 .submit {
     margin: 0;
     padding: 1.5em 0.5em;
@@ -58,10 +73,14 @@
         align-items: center;
         justify-content: center;
     }
-    .card {
+    .card, .card2 {
         min-width: 70vw;
         max-width: 90vw;
         min-height: 70vh;
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+    .card2 {
+        max-height: 70vh;
         box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
     }
     .grid {
@@ -77,9 +96,6 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }
-    .submit {
-        text-align: center;
     }
     .submit>* {
         min-width: 15em;
