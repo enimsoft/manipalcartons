@@ -50,6 +50,19 @@ button:focus {
   background: white;
 }
 
+.btn2 {
+  color: black;
+  border: 1px solid black;
+  background: none;
+}
+
+.btn2:hover,
+.btn2:focus {
+  color: white;
+  background: black;
+}
+
+
 * {
   box-sizing: border-box;
   z-index: 1;

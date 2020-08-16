@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/AboutMobile.module.css'
+import styles from '../styles/About.module.css'
 import cx from 'classnames'
 import correct from '../assets/Guarantee'
 import Guarantee from '../assets/Guarantee'

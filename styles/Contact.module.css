@@ -1,0 +1,75 @@
+.container {
+    background: #f2f2f2;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    background: white;
+    padding: 2em;
+    text-align: center;
+}
+
+.card>div {
+    padding: 0.5em;
+    /* border: 1px solid red; */
+}
+
+.label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.field {
+    height: 3em;
+    width: 100%;
+}
+
+.submit {
+    margin: 2em 0 0 0;
+}
+
+.submit>* {
+    width: 100%;
+}
+
+@media(min-width: 900px) {
+    .card {
+        margin: 2em;
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+    .grid {
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .label {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .input {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .submit {
+        text-align: left;
+    }
+    .submit>* {
+        min-width: 10em;
+        width: auto;
+    }
+    .textarea {
+        resize: none;
+        height: 10em;
+        width: 100%;
+    }
+}
