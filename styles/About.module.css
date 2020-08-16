@@ -42,7 +42,6 @@
     color: white;
     font-size: 1.25em;
 }
-
 .section_1, .section_2 .box {
     /* height: 30%; */
     min-height: 450px;
@@ -99,24 +98,6 @@
 
 .section_2 .box:first-child strong {
     color: white;
-}
-
-.footer {
-    margin: 0;
-    padding: 2em 0;
-    background: #333;
-    color: white;
-}
-
-.footer .contentWrap {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.footer p {
-    font-size: 0.75em;
 }
 
 @media (min-width: 900px) {

@@ -8,6 +8,7 @@ import Safety from '../assets/Safety'
 import Card from '../components/Card/Card'
 
 import background from '../assets/background.jpg'
+import Layout from '../components/Layout/Layout'
 
 const About = () => {
     return (
@@ -18,18 +19,12 @@ const About = () => {
                 <div className={styles.imageContainer}>
                     <img src={background} className={styles.bgImage} />
                 </div>
-                {/* collapsible navbar */}
-                <div className={styles.nav}></div>
 
                 <div className={styles.contentWrap}>
-                    {/* title */}
-                    <h1><strong>Manipal Cartons</strong></h1>
-                    <br/><br/>
-                    <p>
+                    <h3>
                         The <strong>#1</strong> movers and packers in Manipal
-                    </p>
-                    <br />
-
+                    </h3>
+                    <br/>
                     <button>Deliver Now</button>
                 </div>
             </section>
@@ -86,24 +81,8 @@ const About = () => {
                     </div>
                 </div>
             </section>
-
-            <footer className={cx(styles.footer, styles.grid)}>
-                <div className={styles.contentWrap}>
-                    <div className={styles.box}>
-                        <h3>Contact</h3>
-                        <p>+91 7760513189</p>
-                        <p>+91 8105780251</p>
-                    </div>
-
-                    <div className={styles.box}>
-                        <h3>Support</h3>
-                        <p>manipalcartons@gmail.com</p>
-                        {/* <p>support2@example.com</p> */}
-                    </div>
-                </div>
-            </footer>
         </div>
     )
 }
 
-export default About
+export default () => (<Layout><About/></Layout>)

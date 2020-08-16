@@ -1,0 +1,21 @@
+.footer {
+    margin: 0;
+    padding: 2em;
+    background: #333;
+    color: white;
+}
+
+.contentWrap > div {
+    padding: 0 2em;
+}
+
+.footer .contentWrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer p {
+    font-size: 0.75em;
+}
