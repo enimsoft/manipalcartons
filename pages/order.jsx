@@ -3,7 +3,6 @@ import cx from 'classnames'
 import WithStateToggle from '../utils/WithStateToggle'
 import Layout from '../components/Layout/Layout'
 import Link from 'next/link'
-import WithState from '../utils/withState'
 import { useState } from 'react'
 import axios from '../config/axios'
 
@@ -20,7 +19,7 @@ const order = ({ handler }) => {
     })
 
     async function onSubmit() {
-        
+
         // if(Object.keys(state).filter(key => state[key]) != Object.keys(state)) return;
         console.log(state)
         await axios.post('/orders', state)
