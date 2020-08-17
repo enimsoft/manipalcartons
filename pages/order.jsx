@@ -5,6 +5,7 @@ import Layout from '../components/Layout/Layout'
 import Link from 'next/link'
 import { useState } from 'react'
 import axios from '../config/axios'
+import send from '../config/axios'
 
 const order = ({ handler }) => {
 
@@ -19,12 +20,9 @@ const order = ({ handler }) => {
     })
 
     async function onSubmit() {
-
         // if(Object.keys(state).filter(key => state[key]) != Object.keys(state)) return;
         console.log(state)
-        await axios.post('/orders', state)
-            .then(res => console.log(res))
-            .catch(error => console.log(error))
+        await send('/orders', state)
     }
 
     return (

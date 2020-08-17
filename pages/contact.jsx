@@ -5,6 +5,7 @@ import Layout from '../components/Layout/Layout'
 import Link from 'next/link'
 import { useState } from 'react'
 import axios from '../config/axios'
+import send from '../config/axios'
 
 const contact = ({ handler }) => {
 
@@ -12,9 +13,7 @@ const contact = ({ handler }) => {
     async function onSubmit() {
         // if(Object.keys(state).filter(key => state[key]) != Object.keys(state)) return;
         console.log(state)
-        await axios.post('/contacts', state)
-            .then(res => console.log(res))
-            .catch(error => console.log(error))
+        await send('/contacts', state)
     }
 
     return (
