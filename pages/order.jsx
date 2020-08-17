@@ -3,24 +3,84 @@ import cx from 'classnames'
 import WithStateToggle from '../utils/WithStateToggle'
 import Layout from '../components/Layout/Layout'
 import Link from 'next/link'
+import WithState from '../utils/withState'
+import { useState } from 'react'
+import axios from '../config/axios'
 
-const order = ({ handler }) => (
-    <div className={styles.container}>
-        <div className={styles.card}>
-            <h1 className={styles.heading}>Order</h1>
-            <form className={cx(styles.grid, styles.form)}>
-                <div className={styles.label}>Name</div><div className={styles.input}><input type="name" className={styles.field} /></div>
-                <div className={styles.label}>Email</div><div className={styles.input}><input type="email" className={styles.field} /></div>
-                <div className={styles.label}>Phone</div><div className={styles.input}><input type="phone" className={styles.field} /></div>
-                <div className={styles.label}>Hostel Address</div><div className={styles.input}><textarea type="address" className={styles.textarea} /></div>
-                <div className={styles.label}>Home Address</div><div className={styles.input}><textarea type="address" className={styles.textarea} /></div>
-                <div className={styles.label}>Estimated no. of cartons</div><div className={styles.input}><input type="number" className={styles.field} /></div>
-                <div className={styles.label}>Remarks (Any fragile items, flammable material etc.)</div><div className={styles.input}><textarea className={styles.textarea} /></div>
-            </form>
-            <div className={styles.submit}><button class="btn2" onClick={e => handler(e.target.value)}>Submit</button></div>
+const order = ({ handler }) => {
+
+    const [state, setstate] = useState({
+        name: null,
+        email: null,
+        phone: null,
+        hostel: null,
+        home: null,
+        cartons: null,
+        remarks: null
+    })
+
+    async function onSubmit() {
+        
+        // if(Object.keys(state).filter(key => state[key]) != Object.keys(state)) return;
+        console.log(state)
+        await axios.post('/orders', state)
+            .then(res => console.log(res))
+            .catch(error => console.log(error))
+    }
+
+    return (
+        <div className={styles.container}>
+            <div className={styles.card}>
+                <h1 className={styles.heading}>Order</h1>
+                <form className={cx(styles.grid, styles.form)}>
+                    <div className={styles.label}>Name</div>
+                    <div className={styles.input}><input name="name" type="name" className={styles.field}
+                        onChange={e => setstate({ ...state, name: e.target.value })}
+                    /></div>
+
+                    <div className={styles.label}>Email</div>
+                    <div className={styles.input}><input name="email" type="email" className={styles.field}
+                        onChange={e => setstate({ ...state, email: e.target.value })}
+                    /></div>
+
+                    <div className={styles.label}>Phone</div>
+                    <div className={styles.input}><input name="phone" type="phone" className={styles.field}
+                        onChange={e => setstate({ ...state, phone: e.target.value })}
+                    /></div>
+
+                    <div className={styles.label}>Hostel Address</div>
+                    <div className={styles.input}><textarea name="hostel" type="address" className={styles.textarea}
+                        onChange={e => setstate({ ...state, hostel: e.target.value })}
+                    /></div>
+
+                    <div className={styles.label}>Home Address</div>
+                    <div className={styles.input}><textarea name="home" type="address" className={styles.textarea}
+                        onChange={e => setstate({ ...state, home: e.target.value })}
+                    /></div>
+
+                    <div className={styles.label}>Estimated no. of cartons</div>
+                    <div className={styles.input}><input name="cartons" type="number" className={styles.field}
+                        onChange={e => setstate({ ...state, cartons: e.target.value })}
+                    /></div>
+
+                    <div className={styles.label}>Remarks (fragile items etc.)</div>
+                    <div className={styles.input}><textarea name="remarks" className={styles.textarea}
+                        onChange={e => setstate({ ...state, remarks: e.target.value })}
+                    /></div>
+
+                </form>
+                <div className={styles.submit}><button class="btn2" 
+                    onClick={
+                        async () => { 
+                            await onSubmit(); 
+                            handler(); 
+                        }
+                    }
+                >Submit</button></div>
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 const done = ({ handler }) => (
     <div className={styles.container}>
