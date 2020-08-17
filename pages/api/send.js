@@ -8,10 +8,11 @@ const axios = Axios.create({
     baseURL: server(),
 });
 
-const send = async (endpoint, data) => await axios.post(endpoint, data).catch()
+const send = async (endpoint, data) => await axios.post(endpoint, data).catch(e => e)
 
 export default async (req, res) => {
   await send(req.body.endpoint, req.body.data)
+    .catch(e => { console.log(e); })
 
   res.statusCode = 200
   res.send("done")
