@@ -14,5 +14,5 @@ export default async (req, res) => {
   await send(req.body.endpoint, req.body.data)
 
   res.statusCode = 200
-  res.end()
+  res.send("done")
 }

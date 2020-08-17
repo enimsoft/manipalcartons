@@ -4,8 +4,6 @@ import WithStateToggle from '../utils/WithStateToggle'
 import Layout from '../components/Layout/Layout'
 import Link from 'next/link'
 import { useState } from 'react'
-import send from '../config/axios'
-import Axios from 'axios'
 
 const order = ({ handler }) => {
 
