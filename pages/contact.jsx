@@ -4,8 +4,6 @@ import WithStateToggle from '../utils/WithStateToggle'
 import Layout from '../components/Layout/Layout'
 import Link from 'next/link'
 import { useState } from 'react'
-import axios from '../config/axios'
-import send from '../config/axios'
 
 const contact = ({ handler }) => {
 
@@ -13,7 +11,16 @@ const contact = ({ handler }) => {
     async function onSubmit() {
         // if(Object.keys(state).filter(key => state[key]) != Object.keys(state)) return;
         console.log(state)
-        await send('/contacts', state)
+        await fetch('/api/send',
+            {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ endpoint: "/contacts", data: state })
+            }
+        )
     }
 
     return (

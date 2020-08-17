@@ -4,8 +4,8 @@ import WithStateToggle from '../utils/WithStateToggle'
 import Layout from '../components/Layout/Layout'
 import Link from 'next/link'
 import { useState } from 'react'
-import axios from '../config/axios'
 import send from '../config/axios'
+import Axios from 'axios'
 
 const order = ({ handler }) => {
 
@@ -22,7 +22,16 @@ const order = ({ handler }) => {
     async function onSubmit() {
         // if(Object.keys(state).filter(key => state[key]) != Object.keys(state)) return;
         console.log(state)
-        await send('/orders', state)
+        await fetch('/api/send',
+            {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ endpoint: "/orders", data: state })
+            }
+        )
     }
 
     return (
@@ -66,11 +75,11 @@ const order = ({ handler }) => {
                     /></div>
 
                 </form>
-                <div className={styles.submit}><button class="btn2" 
+                <div className={styles.submit}><button class="btn2"
                     onClick={
-                        async () => { 
-                            await onSubmit(); 
-                            handler(); 
+                        async () => {
+                            await onSubmit();
+                            handler();
                         }
                     }
                 >Submit</button></div>
