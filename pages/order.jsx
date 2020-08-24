@@ -5,6 +5,7 @@ import Layout from '../components/Layout/Layout'
 import Link from 'next/link'
 import { useState } from 'react'
 
+// const img = require("../public/background.jpg");
 const order = ({ handler }) => {
 
     const [state, setstate] = useState({
@@ -14,7 +15,11 @@ const order = ({ handler }) => {
         hostel: null,
         home: null,
         cartons: null,
-        remarks: null
+        remarks: null,
+        nop: null,
+        ordertype: null,
+        vehicle: null,
+        nov: null
     })
 
     async function onSubmit() {
@@ -40,6 +45,34 @@ const order = ({ handler }) => {
                     <div className={styles.label}>Name</div>
                     <div className={styles.input}><input name="name" type="name" className={styles.field}
                         onChange={e => setstate({ ...state, name: e.target.value })}
+                    /></div>
+                    <div className={styles.label}>Number Of People</div>
+                    <div className={styles.input}><input name="nop" type="name" className={styles.field}
+                        onChange={e => setstate({ ...state, nop: e.target.value })}
+                    /></div>
+                    <div className={styles.label}>Order Location</div>
+                    <div className={styles.input}><input name="ordertype" type="radio" value="flat" 
+                        onChange={e => setstate({ ...state, ordertype: e.target.value })}
+                    />Flat
+                    <input name="ordertype" type="radio" value="hostel" 
+                        onChange={e => setstate({ ...state, ordertype: e.target.value })}
+                    />Hoster
+                    </div>
+                    <div className={styles.label}>Vehicle</div>
+                    <div className={styles.input}><input name="vehicle" type="radio" value="cycle" 
+                        onChange={e => setstate({ ...state, vehicle: e.target.value })}
+                    />Cycle
+                    <input name="vehicle" type="radio" value="bike" 
+                        onChange={e => setstate({ ...state, vehicle: e.target.value })}
+                    />Bike
+                    <input name="vehicle" type="radio" value="none" 
+                        onChange={e => setstate({ ...state, vehicle: e.target.value })}
+                    />None
+                    </div>
+
+                    <div className={styles.label}>Number Of Vehicle</div>
+                    <div className={styles.input}><input name="nov" type="name" className={styles.field}
+                        onChange={e => setstate({ ...state, nov: e.target.value })}
                     /></div>
 
                     <div className={styles.label}>Email</div>
