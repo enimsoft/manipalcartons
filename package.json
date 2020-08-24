@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV='development' next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV='production' next start -p $PORT",
-    "heroku-postbuild": "npm run build"
+    "start": "NODE_ENV=production node server.js",
+    "export": "npm run build && next export"
+    
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
