@@ -1,2 +1,8 @@
 const withImages = require('next-images')
-module.exports = withImages()
+const withOffline = require('next-offline')
+
+module.exports = withImages(withOffline(
+    {
+        target: 'serverless'
+    }
+));

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "NODE_ENV='production' next start -p $PORT",
-    "export": "npm run build && next export"
+    "export": "npm run build && next export",
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -15,8 +16,11 @@
     "bootstrap": "^4.5.2",
     "classnames": "^2.2.6",
     "file-loader": "^6.0.0",
+    "netlify-cli": "^2.59.1",
     "next": "9.5.2",
     "next-images": "^1.4.1",
+    "next-offline": "^5.0.2",
+    "next-on-netlify": "^2.3.2",
     "next-sass": "^1.0.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",

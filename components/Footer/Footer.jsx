@@ -17,7 +17,7 @@ export default () => (
 
             <div className={styles.box}>
                 <h3>Made By</h3>
-                <a href="https://www.enim.ai" ><img src="static/logo512.png" className={styles.enim} alt=""/></a>
+                <a href="https://www.enim.ai" ><img src="/public/logo512.png" className={styles.enim} alt=""/></a>
                 <p>Enim AI</p>
                 {/* <p>support2@example.com</p> */}
             </div>
