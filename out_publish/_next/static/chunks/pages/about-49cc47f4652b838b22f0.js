@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[7],{STsu:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/about",function(){return t("vBwC")}])},vBwC:function(n,u,t){"use strict";t.r(u);var w=t("q1tI"),_=t.n(w),e=t("cMU6"),o=_.a.createElement;u.default=function(){return o(e.default,null)}}},[["STsu",0,2,1,3]]]);
