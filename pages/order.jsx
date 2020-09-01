@@ -150,7 +150,7 @@ const done = ({ handler }) => (
     <div className={styles.container}>
         <div className={styles.card2}>
             <h1 className={styles.heading}>Order</h1>
-            <h2 className={styles.heading}>Your request has been submitted! We will contact you shortly.</h2>
+            <p>Your request has been submitted! We will contact you shortly.</p>
             <div className={styles.submit2}><Link href="/"><button class="btn2">Okay</button></Link></div>
         </div>
     </div>
