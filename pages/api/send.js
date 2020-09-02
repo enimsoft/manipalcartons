@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const server = () => (process.env.NODE_ENV != "production") 
+const server = () => (process.env.NODE_ENV == "production") 
     ? ["https://manipalcartonsbackend.herokuapp.com", "https://manipalcartonsbackup.herokuapp.com"]
     : ["http://localhost:1337"]
 
