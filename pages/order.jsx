@@ -77,7 +77,7 @@ const order = ({ handler }) => {
                     />Flat
                     <input name="ordertype" type="radio" value="hostel"
                             onChange={e => setstate({ ...state, location: e.target.value })}
-                        />Hoster
+                        />Hostel
                     </div>
                     <div className={styles.label}>Vehicle</div>
                     <div className={styles.input}><input name="vehicle" type="radio" value="cycle"
